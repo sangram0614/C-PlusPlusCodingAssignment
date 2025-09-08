@@ -83,10 +83,10 @@ CLI
 
 IPC Mechanism
 We use TCP sockets for communication between CLI and Daemon.
-    * Platform independent.
-    * Easy to scale across multiple machines (not just same host).
-    * Supports multiple clients simultaneously.
-    * Robust and widely supported in C++.
+* Platform independent.
+* Easy to scale across multiple machines (not just same host).
+* Supports multiple clients simultaneously.
+* Robust and widely supported in C++.
 
 Data Structure Choice is Map
 Key = integer
@@ -144,23 +144,23 @@ Folder structure
 * Note due to macOS the lib is .dylib
 
 Run the daemon 
-./daemon [thread_pool_size] [port] [persistent] 
-./daemon # uses default pool size, port 5555 
-./daemon 8 # 8 threads, port 5555 
-./daemon 8 6000 # 8 threads, port 6000 
-./daemon 2 12345 # 2 threads, port 12345
+     ./daemon [thread_pool_size] [port] [persistent] 
+     ./daemon # uses default pool size, port 5555 
+     ./daemon 8 # 8 threads, port 5555 
+     ./daemon 8 6000 # 8 threads, port 6000 
+     ./daemon 2 12345 # 2 threads, port 12345
 
 Running cli 
-./cli [host] [port] [persistent] 
-./cli # connect to 127.0.0.1:5555 
-./cli 127.0.0.1 6000 # connect to daemon on port 6000 
-./cli myserver 12345 # connect to remote daemon
+     ./cli [host] [port] [persistent] 
+     ./cli # connect to 127.0.0.1:5555 
+     ./cli 127.0.0.1 6000 # connect to daemon on port 6000 
+     ./cli myserver 12345 # connect to remote daemon
 
 Config file can be create in the project folder and can be used. Command line arguments take the priority always. Both daemon and cli uses this file. 
 Config file looks like 
-host=127.0.0.1 
-port=9999 
-persistent=true
+     host=127.0.0.1 
+     port=9999 
+     persistent=true
 
 Following is how to run this.
 1. Build the project (make)
