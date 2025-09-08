@@ -62,7 +62,7 @@ Submission Requirements:
 4. Data Structure Reasoning:
    - Explain your choice of the data structure and why it is suited for this use case.
 
-
+##############################################################################################################################################
 This project implements a daemon (server) and a CLI (client) in C++ that communicate via TCP sockets.The system supports multiple clients concurrently, allows inserting/deleting/printing/finding numbers, and maintains an in-memory data structure with timestamps. The daemon logs all operations to daemon.log.
 
 Daemon
@@ -118,30 +118,30 @@ Prerequisites
 * make
 
 Steps to build 	
-make clean	
-make	
-make all  	
+* make clean	
+* make	
+* make all  	
 
 Folder structure 
-C-PlusPlusCodingAssignment/
-	Makefile
-	readme.md
-	README1.md
-	src/
-		lib/
-			comms.cpp
-			comms.hpp
-		daemon/
-			daemon.cpp
-		cli/
-			cli.cpp
-		build/        # generated after `make`
-			daemon
-			cli
-			libcomms.dylib
-			*.o
-			daemon.log
-*Note due to macOS the lib is .dylib
+* C-PlusPlusCodingAssignment/
+* 	Makefile
+* 	readme.md
+* 	README1.md
+* 	src/
+* 		lib/
+* 			comms.cpp
+* 			comms.hpp
+* 		daemon/
+* 			daemon.cpp
+* 		cli/
+* 			cli.cpp
+* 		build/        # generated after `make`
+* 			daemon
+* 			cli
+* 			libcomms.dylib
+* 			*.o
+*			daemon.log
+* Note due to macOS the lib is .dylib
 
 Run the daemon
 ./daemon [thread_pool_size] [port] [persistent]
