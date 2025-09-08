@@ -4,7 +4,7 @@
 #include <mutex>
 #include <condition_variable>
 #include <queue>
-#include <set>
+#include <unordered_set>
 #include <chrono>
 #include <fstream>
 #include <sstream>
@@ -12,7 +12,7 @@
 #include <atomic>
 #include <unistd.h>
 
-std::set<int> numbers;
+std::unordered_set<int> numbers;
 std::map<int, time_t> timestamps;
 std::mutex data_mutex;
 
