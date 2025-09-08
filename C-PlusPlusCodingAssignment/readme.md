@@ -105,15 +105,14 @@ Efficient operations:
 Timestamps stored alongside numbers allow easy retrieval of both value and metadata.
 
 Additionally used unordered set to ensure O(1) for searching the value.
-So first value is check in the set and then inserted into the map. Additional storage is needed to avoid the searching time in the map.
+So first value is check in the unordered set and then inserted into the map. Additional storage is needed to avoid the searching time in the map.
 
 Concurrency Model
 The daemon uses a thread pool (default: 4 worker threads).
 * Client connections are accepted and added to a task queue. Task queue is protected with queue_mutex
 * Worker threads fetch connections from the queue and handle requests.
 * This avoids unbounded thread creation and improves performance under load.
-* Access to the shared data structure (map and set) is synchronized with data_mutex.
-
+* Access to the shared data structure (map and unordered set) is synchronized with data_mutex.
 
 Prerequisites
 * Linux / macOS
