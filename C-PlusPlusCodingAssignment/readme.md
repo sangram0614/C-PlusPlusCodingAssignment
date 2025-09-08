@@ -104,7 +104,7 @@ Efficient operations:
 * Iteration (sorted): O(n)
 Timestamps stored alongside numbers allow easy retrieval of both value and metadata.
 
-Additionally used set to ensure Ensures uniqueness.
+Additionally used unordered set to ensure O(1) for searching the value.
 So first value is check in the set and then inserted into the map. Additional storage is needed to avoid the searching time in the map.
 
 Concurrency Model
