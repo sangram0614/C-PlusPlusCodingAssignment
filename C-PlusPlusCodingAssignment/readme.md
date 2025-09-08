@@ -117,10 +117,10 @@ Prerequisites
 * g++ with C++17 support
 * make
 
-Steps to build 
-make clean
-make
-make all  
+Steps to build 	
+make clean	
+make	
+make all  	
 
 Folder structure 
 C-PlusPlusCodingAssignment/
@@ -143,18 +143,18 @@ C-PlusPlusCodingAssignment/
 			daemon.log
 *Note due to macOS the lib is .dylib
 
-Run the daemon 
+Run the daemon
 ./daemon [thread_pool_size] [port] [persistent]
-./daemon          # uses default pool size, port 5555
-./daemon 8        # 8 threads, port 5555
-./daemon 8 6000   # 8 threads, port 6000
-./daemon 2 12345  # 2 threads, port 12345
+./daemon			# uses default pool size, port 5555	
+./daemon 8			# 8 threads, port 5555	
+./daemon 8 6000		# 8 threads, port 6000	
+./daemon 2 12345	# 2 threads, port 12345	
 
 Running cli
 ./cli [host] [port] [persistent]
-./cli                # connect to 127.0.0.1:5555
-./cli 127.0.0.1 6000 # connect to daemon on port 6000
-./cli myserver 12345 # connect to remote daemon
+./cli                # connect to 127.0.0.1:5555	
+./cli 127.0.0.1 6000 # connect to daemon on port 6000	
+./cli myserver 12345 # connect to remote daemon	
 
 Config file can be create in the project folder and can be used. Command line arguments take the priority always. Both daemon and cli uses this file.
 Config file looks like
